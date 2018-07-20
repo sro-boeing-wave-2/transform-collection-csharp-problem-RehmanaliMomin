@@ -9,17 +9,14 @@ namespace Transform
 
     public static class Transform 
     {
-
-        public static List<int> Map(int[] input, mapdel operation)
+        public static List<int> Map(this int[] input, mapdel operation)
         {
             List<int> trans = new List<int>();
-            foreach (var item in input)
+            foreach (int item in input)
             {
-                trans.Add(operation(n));
+                trans.Add(operation(item));
             }
-
             return trans;
-
         }
     }
 }
